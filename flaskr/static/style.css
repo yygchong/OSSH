@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+}
+
+/* To align items horizontally */
+.container.horizontal {
+    flex-direction: row;
+}
+
+/* To align items vertically */
+.container.vertical {
+    flex-direction: column;
+}
+
+/* To align items in the center */
+.container.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* To align items to the start */
+.container.start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* To align items to the end */
+.container.end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* To space items evenly */
+.container.space-evenly {
+    justify-content: space-evenly;
+}
+
+/* To space items around */
+.container.space-around {
+    justify-content: space-around;
+}
+
+/* To space items between */
+.container.space-between {
+    justify-content: space-between;
+}

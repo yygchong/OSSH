@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div class="container center vertical">
+            <h1>Dashboard</h1>
+            <p>Welcome to the dashboard, {{ username }}!</p>
+            "Hey I'm Open Source Smart Home, but you can call me OSSH for short. I am here to help you automate your home and IOT devices on your local area network to allow for more customizability, quicker action times, and more privacy from big tech smart home devices."
+        </div>
+        
+
+        <div class="container center" id="device-panel">
+            <div class="container vertical"> 
+                <h2>Devices</h2>
+                <table>
+                    <tr>
+                        <th>Device ID</th>
+                        <th>Device Name</th>
+                        <th>Device Type</th>
+                        <th>Device Status</th>
+                    </tr>
+                    {% for device in devices %}
+                        <tr>
+                            <td>{{ device[0] }}</td>
+                            <td>{{ device[1] }}</td>
+                            <td>{{ device[2] }}</td>
+                            <td>{{ device[3] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            
+        </div>
+
+</html>
